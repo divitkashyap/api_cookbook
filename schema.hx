@@ -17,7 +17,7 @@
 // N::User {
 //     Name: String,
 //     Label: String,
-//     Age: Integer,
+//     Age: Int,
 //     IsAdmin: Boolean,
 // }
 //
@@ -25,7 +25,7 @@
 //     From: User,
 //     To: User,
 //     Properties: {
-//         Since: Integer,
+//         Since: Int,
 //     }
 // }
 //
@@ -33,37 +33,76 @@
 // see the documentation at https://docs.helix-db.com
 // or checkout our GitHub at https://github.com/HelixDB/helix-db
 
-N::Continent {
-    name: String,
+// Core API entities
+N::API {
+    INDEX name: String,     // "Stripe", "OpenAI", "GitHub" - INDEX for search
+    base_url: String,       // "https://api.stripe.com"
+    version: String,        // "2023-10-16"
+    docs_url: String
 }
 
-N::Country {
-    name: String,
-    currency: String 
+N::Endpoint {
+    path: String,           // "/v1/customers"
+    method: String,         // "POST", "GET", etc.
+    summary: String,        // Brief description
+    description: String     // Full description
 }
 
-N::City {
-    name: String,
-    description: String
+N::Parameter {
+    name: String,           // "customer_id"
+    param_type: String,           // "string", "I32"
+    required: Boolean,
+    description: String,
+    example: String
 }
 
-E::Continent_to_Country {
-    From: Continent,
-    To: Country,
-    Properties: {
-    }
+N::ErrorPattern {
+    INDEX code: String,     // "authentication_failed", "invalid_request" - INDEX for search
+    message: String,        // "Your API key is invalid"
+    description: String     // Full error context
 }
 
-E::Country_to_City {
-    From: Country,
-    To: City,
-    Properties: {
-    }
+N::Solution {
+    title: String,          // "Fix authentication error"
+    description: String,    // Explanation
+    code_example: String,   // Working code
+    source_url: String,     // GitHub issue, docs link
+    upvotes: I32            // Use I32 instead of Int
 }
 
-E::Country_to_Captial {
-    From: Country,
-    To: City,
-    Properties: {
-    }
+// Relationships - Add missing API_to_ErrorPattern edge
+E::API_to_Endpoint {
+    From: API,
+    To: Endpoint,
+    Properties: {}
+}
+
+E::API_to_ErrorPattern {
+    From: API,
+    To: ErrorPattern,
+    Properties: {}
+}
+
+E::Endpoint_to_Parameter {
+    From: Endpoint,
+    To: Parameter,
+    Properties: {}
+}
+
+E::Endpoint_to_ErrorPattern {
+    From: Endpoint,
+    To: ErrorPattern,
+    Properties: {}
+}
+
+E::ErrorPattern_to_Solution {
+    From: ErrorPattern,
+    To: Solution,
+    Properties: {}
+}
+
+E::ErrorPattern_to_Parameter {
+    From: ErrorPattern,
+    To: Parameter,
+    Properties: {}
 }

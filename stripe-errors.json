@@ -1,0 +1,26 @@
+[
+  {
+    "api": "Stripe",
+    "endpoint": "/v1/customers",
+    "method": "POST",
+    "error_code": "invalid_request_error",
+    "error_message": "No such customer: cus_123",
+    "description": "The customer ID provided does not exist",
+    "solution_title": "Verify Customer ID",
+    "solution_description": "Check that the customer ID exists and belongs to your account",
+    "code_example": "const customer = await stripe.customers.retrieve('cus_valid_id');",
+    "source_url": "https://stripe.com/docs/error-codes"
+  },
+  {
+    "api": "Stripe", 
+    "endpoint": "/v1/charges",
+    "method": "POST",
+    "error_code": "card_declined",
+    "error_message": "Your card was declined",
+    "description": "The card has been declined by the issuer",
+    "solution_title": "Handle Card Decline",
+    "solution_description": "Ask customer to contact their bank or try a different card",
+    "code_example": "try { await stripe.charges.create({...}) } catch(err) { if(err.code === 'card_declined') { /* handle */ } }",
+    "source_url": "https://stripe.com/docs/declines"
+  }
+]
