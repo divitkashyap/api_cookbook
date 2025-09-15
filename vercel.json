@@ -1,0 +1,12 @@
+{
+  "buildCommand": "cd errata-frontend && npm run build",
+  "outputDirectory": "errata-frontend/dist",
+  "installCommand": "cd errata-frontend && npm install",
+  "devCommand": "cd errata-frontend && npm run dev",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
