@@ -1,0 +1,14 @@
+node_modules/
+*.log
+.env
+.DS_Store
+dist/
+build/
+.cache/
+.parcel-cache/
+.nyc_output/
+coverage/
+.vscode/
+.idea/
+*.tsbuildinfo
+.eslintcache

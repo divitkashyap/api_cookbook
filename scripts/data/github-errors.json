@@ -1,0 +1,76 @@
+[
+  {
+    "api": "GitHub",
+    "resource": "authentication",
+    "error_type": "authentication_error",
+    "error_code": "bad_credentials",
+    "http_status": 401,
+    "error_message": "Bad credentials",
+    "solution_title": "Check your authentication token",
+    "solution_description": "Verify your GitHub token is valid and has the necessary scopes. Regenerate the token if needed.",
+    "source_url": "https://docs.github.com/en/rest/overview/other-authentication-methods",
+    "last_verified": "2025-09-12T06:23:14.820Z",
+    "severity": "critical",
+    "category": "Authentication",
+    "tags": [
+      "auth",
+      "token",
+      "credentials"
+    ]
+  },
+  {
+    "api": "GitHub",
+    "resource": "rate_limits",
+    "error_type": "rate_limit_error",
+    "error_code": "rate_limit_exceeded",
+    "http_status": 403,
+    "error_message": "API rate limit exceeded",
+    "solution_title": "Implement rate limit handling",
+    "solution_description": "Check rate limit headers and implement exponential backoff. Consider using authenticated requests for higher limits.",
+    "source_url": "https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting",
+    "last_verified": "2025-09-12T06:23:14.820Z",
+    "severity": "warning",
+    "category": "Rate Limiting",
+    "tags": [
+      "rate-limit",
+      "throttling"
+    ]
+  },
+  {
+    "api": "GitHub",
+    "resource": "repositories",
+    "error_type": "not_found_error",
+    "error_code": "not_found",
+    "http_status": 404,
+    "error_message": "Not Found",
+    "solution_title": "Verify repository exists and access permissions",
+    "solution_description": "Check that the repository exists, is public, or your token has access to private repositories.",
+    "source_url": "https://docs.github.com/en/rest/repos/repos#get-a-repository",
+    "last_verified": "2025-09-12T06:23:14.820Z",
+    "severity": "error",
+    "category": "Resources",
+    "tags": [
+      "repository",
+      "permissions",
+      "access"
+    ]
+  },
+  {
+    "api": "GitHub",
+    "resource": "validation",
+    "error_type": "validation_error",
+    "error_code": "validation_failed",
+    "http_status": 422,
+    "error_message": "Validation Failed",
+    "solution_title": "Check request parameters",
+    "solution_description": "Review the request body and ensure all required fields are provided with valid values.",
+    "source_url": "https://docs.github.com/en/rest/overview/other-authentication-methods",
+    "last_verified": "2025-09-12T06:23:14.820Z",
+    "severity": "error",
+    "category": "Validation",
+    "tags": [
+      "validation",
+      "parameters"
+    ]
+  }
+]

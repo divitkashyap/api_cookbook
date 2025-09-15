@@ -1,0 +1,2753 @@
+[
+  {
+    "id": "stripe_account_closed_1757671342037_0",
+    "code": "account_closed",
+    "title": "Stripe account_closed Error",
+    "description": "The customer's bank account has been closed.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_account_country_invalid_address_1757671342037_1",
+    "code": "account_country_invalid_address",
+    "title": "Stripe account_country_invalid_address Error",
+    "description": "The country of the business address provided doesn't match the country of the account. Businesses must be located in the same country as the account.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_account_invalid_1757671342037_2",
+    "code": "account_invalid",
+    "title": "Stripe account_invalid Error",
+    "description": "The account ID provided as a value for the Stripe-Account header is invalid. Check that your requests are specifying a valid account ID.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_account_error_country_change_requires_additional_steps_1757671342037_3",
+    "code": "account_error_country_change_requires_additional_steps",
+    "title": "Stripe account_error_country_change_requires_additional_steps Error",
+    "description": "Your account has already onboarded as a Connect platform. Changing your country requires additional steps. Contact Stripe support for more information.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_account_number_invalid_1757671342037_4",
+    "code": "account_number_invalid",
+    "title": "Stripe account_number_invalid Error",
+    "description": "The bank account number provided is invalid (for example, missing digits). Bank account information varies from country to country. We recommend creating validations in your entry forms based on the bank account formats we provide.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Very Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_amount_too_large_1757671342037_5",
+    "code": "amount_too_large",
+    "title": "Stripe amount_too_large Error",
+    "description": "The specified amount is greater than the maximum amount allowed. Use a lower amount and try again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_amount_too_small_1757671342037_6",
+    "code": "amount_too_small",
+    "title": "Stripe amount_too_small Error",
+    "description": "The specified amount is less than the minimum amount allowed. Use a higher amount and try again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_api_key_expired_1757671342037_7",
+    "code": "api_key_expired",
+    "title": "Stripe api_key_expired Error",
+    "description": "The API key provided has expired. Obtain your current API keys from the Dashboard and update your integration to use them.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_authentication_required_1757671342037_8",
+    "code": "authentication_required",
+    "title": "Stripe authentication_required Error",
+    "description": "The payment requires authentication to proceed. If your customer is off session, notify your customer to return to your application and complete the payment. If you provided the error_on_requires_action parameter, then your customer should try another card that doesn't require authentication.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Very Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security"
+    ]
+  },
+  {
+    "id": "stripe_balance_insufficient_1757671342037_9",
+    "code": "balance_insufficient",
+    "title": "Stripe balance_insufficient Error",
+    "description": "The transfer or payout couldn't be completed because the associated account doesn't have a sufficient balance available. Create a new transfer or payout using an amount less than or equal to the account's available balance.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Transfers & Payouts",
+    "tags": [
+      "stripe",
+      "api",
+      "transfers_&_payouts"
+    ]
+  },
+  {
+    "id": "stripe_balance_invalid_parameter_1757671342037_10",
+    "code": "balance_invalid_parameter",
+    "title": "Stripe balance_invalid_parameter Error",
+    "description": "Invalid parameter was provided in the balance method object. Check our API documentation or the returned error message for more context.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_bad_routing_numbers_1757671342037_11",
+    "code": "bank_account_bad_routing_numbers",
+    "title": "Stripe bank_account_bad_routing_numbers Error",
+    "description": "The bank account is known to not support the currency in question.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_declined_1757671342037_12",
+    "code": "bank_account_declined",
+    "title": "Stripe bank_account_declined Error",
+    "description": "The bank account provided can't be used to charge, either because it isn't verified yet or it isn't supported.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_exists_1757671342037_13",
+    "code": "bank_account_exists",
+    "title": "Stripe bank_account_exists Error",
+    "description": "The bank account provided already exists on the specified Customer object. If the bank account should also be attached to a different customer, include the correct customer ID when making the request again.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_verification_failed_1757671342037_14",
+    "code": "bank_account_verification_failed",
+    "title": "Stripe bank_account_verification_failed Error",
+    "description": "The bank account can't be verified, either because the microdeposit amounts provided don't match the actual amounts, or because verification has failed too many times.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_unusable_1757671342037_15",
+    "code": "bank_account_unusable",
+    "title": "Stripe bank_account_unusable Error",
+    "description": "The bank account provided can't be used. A different bank account must be used.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_unverified_1757671342037_16",
+    "code": "bank_account_unverified",
+    "title": "Stripe bank_account_unverified Error",
+    "description": "Your Connect platform is attempting to share an unverified bank account with a connected account.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_capture_charge_authorization_expired_1757671342037_17",
+    "code": "capture_charge_authorization_expired",
+    "title": "Stripe capture_charge_authorization_expired Error",
+    "description": "The charge can't be captured as the authorisation has expired. Refer to the payment method's documentation to learn more.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_capture_unauthorized_payment_1757671342037_18",
+    "code": "capture_unauthorized_payment",
+    "title": "Stripe capture_unauthorized_payment Error",
+    "description": "The charge you're attempting to capture has not been authorised for capturing payment.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_card_decline_rate_limit_exceeded_1757671342038_19",
+    "code": "card_decline_rate_limit_exceeded",
+    "title": "Stripe card_decline_rate_limit_exceeded Error",
+    "description": "This card has been declined too many times. You can try to charge this card again after 24 hours. We suggest contacting your customer to make sure they've entered all of their information correctly and that there are no issues with their card.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "card",
+      "payment",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_already_captured_1757671342038_20",
+    "code": "charge_already_captured",
+    "title": "Stripe charge_already_captured Error",
+    "description": "The charge you're attempting to capture has already been captured. Update the request with an uncaptured charge ID.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_already_refunded_1757671342038_21",
+    "code": "charge_already_refunded",
+    "title": "Stripe charge_already_refunded Error",
+    "description": "The charge you're attempting to refund has already been refunded. Update the request to use the ID of a charge that has not been refunded.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_disputed_1757671342038_22",
+    "code": "charge_disputed",
+    "title": "Stripe charge_disputed Error",
+    "description": "The charge you're attempting to refund has been charged back. See Disputes to learn how to respond to the dispute.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_exceeds_source_limit_1757671342038_23",
+    "code": "charge_exceeds_source_limit",
+    "title": "Stripe charge_exceeds_source_limit Error",
+    "description": "This charge would cause you to exceed your rolling-window processing limit for this source type. Retry the charge later, or contact us to request a higher processing limit.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_exceeds_transaction_limit_1757671342038_24",
+    "code": "charge_exceeds_transaction_limit",
+    "title": "Stripe charge_exceeds_transaction_limit Error",
+    "description": "This charge would cause you to exceed your processing limit for this payment type. Contact us to request a higher processing limit.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_invalid_parameter_1757671342038_25",
+    "code": "charge_invalid_parameter",
+    "title": "Stripe charge_invalid_parameter Error",
+    "description": "One or more provided parameters was not allowed for the given operation on the Charge. See our API reference or the returned error message to see which values weren't correct for that Charge.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_country_unsupported_1757671342038_26",
+    "code": "country_unsupported",
+    "title": "Stripe country_unsupported Error",
+    "description": "Your platform attempted to create a custom account in a country that's not yet supported. Make sure that users can only sign up in countries supported by custom accounts.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_country_code_invalid_1757671342038_27",
+    "code": "country_code_invalid",
+    "title": "Stripe country_code_invalid Error",
+    "description": "The country code provided was invalid.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_coupon_expired_1757671342038_28",
+    "code": "coupon_expired",
+    "title": "Stripe coupon_expired Error",
+    "description": "The coupon provided for a subscription or order has expired. Either create a new coupon, or use an existing one that's valid.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_customer_max_subscriptions_1757671342038_29",
+    "code": "customer_max_subscriptions",
+    "title": "Stripe customer_max_subscriptions Error",
+    "description": "The maximum number of subscriptions for a customer has been reached. Contact us if you're receiving this error.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "subscription",
+      "recurring",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_customer_max_payment_methods_1757671342038_30",
+    "code": "customer_max_payment_methods",
+    "title": "Stripe customer_max_payment_methods Error",
+    "description": "The maximum number of PaymentMethods for this Customer has been reached. Either detach some PaymentMethods from this Customer or proceed with a different Customer.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_customer_tax_location_invalid_1757671342038_31",
+    "code": "customer_tax_location_invalid",
+    "title": "Stripe customer_tax_location_invalid Error",
+    "description": "The customer address is missing or not valid for tax purposes. Make sure to provide a country as a two-letter ISO code and also a postal_code, at minimum. See how to collect customer addresses.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_shipping_address_invalid_1757671342038_32",
+    "code": "shipping_address_invalid",
+    "title": "Stripe shipping_address_invalid Error",
+    "description": "The shipping address information can't be used to accurately determine tax rates. Verify that address fields such as zip or postal code, state, region, or province have been added correctly.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_billing_invalid_mandate_1757671342038_33",
+    "code": "billing_invalid_mandate",
+    "title": "Stripe billing_invalid_mandate Error",
+    "description": "The Subscription or Invoice attempted payment on a PaymentMethod without an active mandate. To create Subscription or Invoice payments with this PaymentMethod, it must be confirmed on-session with a PaymentIntent or SetupIntent first.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_email_invalid_1757671342038_34",
+    "code": "email_invalid",
+    "title": "Stripe email_invalid Error",
+    "description": "The email address is invalid (for example, not properly formatted). Check that the email address is properly formatted and only includes allowed characters.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_idempotency_key_in_use_1757671342038_35",
+    "code": "idempotency_key_in_use",
+    "title": "Stripe idempotency_key_in_use Error",
+    "description": "The idempotency key provided is currently being used in another request. This occurs if your integration is making duplicate requests simultaneously.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_financial_connections_account_inactive_1757671342038_36",
+    "code": "financial_connections_account_inactive",
+    "title": "Stripe financial_connections_account_inactive Error",
+    "description": "Data can't be refreshed on inactive Financial Connections accounts.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Rare",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "connect",
+      "platform",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_financial_connections_no_successful_transaction_refresh_1757671342038_37",
+    "code": "financial_connections_no_successful_transaction_refresh",
+    "title": "Stripe financial_connections_no_successful_transaction_refresh Error",
+    "description": "Transaction data can only be retrieved for accounts that have at least one successful transaction refresh.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Rare",
+    "category": "Stripe Connect",
+    "tags": [
+      "stripe",
+      "api",
+      "connect",
+      "platform",
+      "stripe_connect"
+    ]
+  },
+  {
+    "id": "stripe_instant_payouts_unsupported_1757671342038_38",
+    "code": "instant_payouts_unsupported",
+    "title": "Stripe instant_payouts_unsupported Error",
+    "description": "Instant Payouts are not available for this request. See Instant payouts for detailed requirements and supported configurations.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Transfers & Payouts",
+    "tags": [
+      "stripe",
+      "api",
+      "transfers_&_payouts"
+    ]
+  },
+  {
+    "id": "stripe_instant_payouts_limit_exceeded_1757671342038_39",
+    "code": "instant_payouts_limit_exceeded",
+    "title": "Stripe instant_payouts_limit_exceeded Error",
+    "description": "You've reached your daily processing limits for Instant Payouts.",
+    "solution": "Implement exponential backoff in your retry logic.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Uncommon",
+    "category": "Rate Limiting",
+    "tags": [
+      "stripe",
+      "api",
+      "rate_limiting"
+    ]
+  },
+  {
+    "id": "stripe_instant_payouts_config_disabled_1757671342038_40",
+    "code": "instant_payouts_config_disabled",
+    "title": "Stripe instant_payouts_config_disabled Error",
+    "description": "This connected account isn't eligible for Instant Payouts. Ask the platform to enable Instant Payouts.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Transfers & Payouts",
+    "tags": [
+      "stripe",
+      "api",
+      "transfers_&_payouts"
+    ]
+  },
+  {
+    "id": "stripe_payouts_limit_exceeded_1757671342038_41",
+    "code": "payouts_limit_exceeded",
+    "title": "Stripe payouts_limit_exceeded Error",
+    "description": "You've reached your daily processing limits for this payout type.",
+    "solution": "Implement exponential backoff in your retry logic.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Uncommon",
+    "category": "Rate Limiting",
+    "tags": [
+      "stripe",
+      "api",
+      "rate_limiting"
+    ]
+  },
+  {
+    "id": "stripe_insufficient_funds_1757671342038_42",
+    "code": "insufficient_funds",
+    "title": "Stripe insufficient_funds Error",
+    "description": "The customer's account has insufficient funds to cover this payment.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_invalid_characters_1757671342038_43",
+    "code": "invalid_characters",
+    "title": "Stripe invalid_characters Error",
+    "description": "This value provided to the field contains characters that are unsupported by the field.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_card_type_1757671342038_44",
+    "code": "invalid_card_type",
+    "title": "Stripe invalid_card_type Error",
+    "description": "The card provided as an external account isn't supported for payouts. Provide a non-prepaid debit card instead.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "card",
+      "payment",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_invoice_no_customer_line_items_1757671342038_45",
+    "code": "invoice_no_customer_line_items",
+    "title": "Stripe invoice_no_customer_line_items Error",
+    "description": "An invoice can't be generated for the specified customer as there are no pending invoice items. Verify that the correct customer is being specified or create any necessary invoice items first.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_invoice_on_behalf_of_not_editable_1757671342038_46",
+    "code": "invoice_on_behalf_of_not_editable",
+    "title": "Stripe invoice_on_behalf_of_not_editable Error",
+    "description": "You can't update the on_behalf_of property of an invoice after the invoice has been assigned a number.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Subscriptions",
+    "tags": [
+      "stripe",
+      "api",
+      "subscriptions"
+    ]
+  },
+  {
+    "id": "stripe_invoice_no_payment_method_types_1757671342038_47",
+    "code": "invoice_no_payment_method_types",
+    "title": "Stripe invoice_no_payment_method_types Error",
+    "description": "An invoice can't be finalised because there are no payment method types available to process the payment. Your invoice template settings or the invoice's payment_settings might be restricting which payment methods are available, or you might need to activate more payment methods in the Dashboard.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_invoice_no_subscription_line_items_1757671342038_48",
+    "code": "invoice_no_subscription_line_items",
+    "title": "Stripe invoice_no_subscription_line_items Error",
+    "description": "An invoice can't be generated for the specified subscription as there are no pending invoice items. Verify that the correct subscription is being specified or create any necessary invoice items first.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Subscriptions",
+    "tags": [
+      "stripe",
+      "api",
+      "subscription",
+      "recurring",
+      "subscriptions"
+    ]
+  },
+  {
+    "id": "stripe_invoice_not_editable_1757671342038_49",
+    "code": "invoice_not_editable",
+    "title": "Stripe invoice_not_editable Error",
+    "description": "The specified invoice can no longer be edited. Instead, consider creating additional invoice items that will be applied to the next invoice. You can either manually generate the next invoice or wait for it to be automatically generated at the end of the billing cycle.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Subscriptions",
+    "tags": [
+      "stripe",
+      "api",
+      "subscriptions"
+    ]
+  },
+  {
+    "id": "stripe_invoice_payment_intent_requires_action_1757671342038_50",
+    "code": "invoice_payment_intent_requires_action",
+    "title": "Stripe invoice_payment_intent_requires_action Error",
+    "description": "This payment requires additional user action before it can be completed successfully. Payment can be completed using the PaymentIntent associated with the invoice.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_invoice_upcoming_none_1757671342038_51",
+    "code": "invoice_upcoming_none",
+    "title": "Stripe invoice_upcoming_none Error",
+    "description": "There is no upcoming invoice on the specified customer to preview. Only customers with active subscriptions or pending invoice items have invoices that can be previewed.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Subscriptions",
+    "tags": [
+      "stripe",
+      "api",
+      "subscriptions"
+    ]
+  },
+  {
+    "id": "stripe_no_account_1757671342038_52",
+    "code": "no_account",
+    "title": "Stripe no_account Error",
+    "description": "The bank account couldn't be located.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_debit_not_authorized_1757671342038_53",
+    "code": "debit_not_authorized",
+    "title": "Stripe debit_not_authorized Error",
+    "description": "The customer has notified their bank that this payment was unauthorized.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security"
+    ]
+  },
+  {
+    "id": "stripe_bank_account_restricted_1757671342038_54",
+    "code": "bank_account_restricted",
+    "title": "Stripe bank_account_restricted Error",
+    "description": "The customer's account can't be used with the payment method.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_out_of_inventory_1757671342038_55",
+    "code": "out_of_inventory",
+    "title": "Stripe out_of_inventory Error",
+    "description": "One or more line item(s) are out of stock. If more stock is available, update the inventory's orderable quantity and try again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_parameter_invalid_empty_1757671342038_56",
+    "code": "parameter_invalid_empty",
+    "title": "Stripe parameter_invalid_empty Error",
+    "description": "One or more required values weren't provided. Make sure requests include all required parameters.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_parameter_invalid_integer_1757671342038_57",
+    "code": "parameter_invalid_integer",
+    "title": "Stripe parameter_invalid_integer Error",
+    "description": "One or more of the parameters requires an integer, but the values provided were a different type. Make sure that only supported values are provided for each attribute. Refer to the API reference to see the type of data each attribute supports.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_parameter_invalid_string_blank_1757671342038_58",
+    "code": "parameter_invalid_string_blank",
+    "title": "Stripe parameter_invalid_string_blank Error",
+    "description": "One or more values provided only included whitespace. Check the values in your request and update any that contain only whitespace.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_parameter_invalid_string_empty_1757671342038_59",
+    "code": "parameter_invalid_string_empty",
+    "title": "Stripe parameter_invalid_string_empty Error",
+    "description": "One or more required string values is empty. Make sure that string values contain at least one character.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_parameter_missing_1757671342038_60",
+    "code": "parameter_missing",
+    "title": "Stripe parameter_missing Error",
+    "description": "One or more required values are missing. Check our API documentation to see which values are required to create or modify the specified resource.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_parameter_unknown_1757671342038_61",
+    "code": "parameter_unknown",
+    "title": "Stripe parameter_unknown Error",
+    "description": "The request contains one or more unexpected parameters. Remove these and try again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_parameters_exclusive_1757671342038_62",
+    "code": "parameters_exclusive",
+    "title": "Stripe parameters_exclusive Error",
+    "description": "Two or more mutually exclusive parameters were provided. See the API reference or the returned error message to see which values are permitted when creating or modifying the specified resource.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_acss_debit_session_incomplete_1757671342038_63",
+    "code": "acss_debit_session_incomplete",
+    "title": "Stripe acss_debit_session_incomplete Error",
+    "description": "The ACSS debit session isn't ready to transition to complete status yet. Try the request again later.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_billing_details_address_missing_1757671342038_64",
+    "code": "payment_method_billing_details_address_missing",
+    "title": "Stripe payment_method_billing_details_address_missing Error",
+    "description": "The PaymentMethod's billing details is missing address details. Update the missing fields and try again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_unsupported_type_1757671342038_65",
+    "code": "payment_method_unsupported_type",
+    "title": "Stripe payment_method_unsupported_type Error",
+    "description": "The API only supports payment methods of certain types.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_customer_decline_1757671342038_66",
+    "code": "payment_method_customer_decline",
+    "title": "Stripe payment_method_customer_decline Error",
+    "description": "The customer didn't approve the payment. Provide a new payment method to attempt to fulfil this intent again.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_verification_attempts_exceeded_1757671342038_67",
+    "code": "payment_method_microdeposit_verification_attempts_exceeded",
+    "title": "Stripe payment_method_microdeposit_verification_attempts_exceeded Error",
+    "description": "You've exceeded the number of allowed verification attempts.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_intent_invalid_state_1757671342038_68",
+    "code": "intent_invalid_state",
+    "title": "Stripe intent_invalid_state Error",
+    "description": "Intent isn't in the state that's required to perform the operation.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_intent_verification_method_missing_1757671342038_69",
+    "code": "intent_verification_method_missing",
+    "title": "Stripe intent_verification_method_missing Error",
+    "description": "Intent doesn't have verification method specified in its PaymentMethodOptions object.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_invalid_parameter_1757671342038_70",
+    "code": "payment_method_invalid_parameter",
+    "title": "Stripe payment_method_invalid_parameter Error",
+    "description": "Invalid parameter was provided in the payment method object. See the API reference or the returned error message for more context.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_invalid_parameter_testmode_1757671342038_71",
+    "code": "payment_method_invalid_parameter_testmode",
+    "title": "Stripe payment_method_invalid_parameter_testmode Error",
+    "description": "The parameter provided for payment method isn't allowed to be used in testmode. See the API reference or the returned error message for more context.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_provider_timeout_1757671342038_72",
+    "code": "payment_method_provider_timeout",
+    "title": "Stripe payment_method_provider_timeout Error",
+    "description": "The payment method failed due to a timeout. Check the last_payment_error or last_setup_error property on the PaymentIntent or SetupIntent respectively for more details, and provide a new payment method to attempt to fulfil this intent again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_provider_decline_1757671342038_73",
+    "code": "payment_method_provider_decline",
+    "title": "Stripe payment_method_provider_decline Error",
+    "description": "The payment or setup attempt was declined by the issuer or customer. Check the last_payment_error or last_setup_error property on the PaymentIntent or SetupIntent respectively for more details, and provide a new payment method to attempt to fulfil this intent again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_verification_amounts_mismatch_1757671342038_74",
+    "code": "payment_method_microdeposit_verification_amounts_mismatch",
+    "title": "Stripe payment_method_microdeposit_verification_amounts_mismatch Error",
+    "description": "The amounts provided don't match the amounts that were sent to the bank account.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_verification_descriptor_code_mismatch_1757671342038_75",
+    "code": "payment_method_microdeposit_verification_descriptor_code_mismatch",
+    "title": "Stripe payment_method_microdeposit_verification_descriptor_code_mismatch Error",
+    "description": "The verification code provided doesn't match the one sent to the bank account.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_verification_amounts_invalid_1757671342038_76",
+    "code": "payment_method_microdeposit_verification_amounts_invalid",
+    "title": "Stripe payment_method_microdeposit_verification_amounts_invalid Error",
+    "description": "You must provide exactly two micro-deposit amounts.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_failed_1757671342038_77",
+    "code": "payment_method_microdeposit_failed",
+    "title": "Stripe payment_method_microdeposit_failed Error",
+    "description": "Microdeposits were failed to be deposited into the customer's bank account. Check the account, institution, transit numbers, and currency type.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_microdeposit_verification_timeout_1757671342038_78",
+    "code": "payment_method_microdeposit_verification_timeout",
+    "title": "Stripe payment_method_microdeposit_verification_timeout Error",
+    "description": "Payment method should be verified with microdeposits within the required period.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_bank_account_already_verified_1757671342038_79",
+    "code": "payment_method_bank_account_already_verified",
+    "title": "Stripe payment_method_bank_account_already_verified Error",
+    "description": "This bank account has already been verified.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_bank_account_blocked_1757671342038_80",
+    "code": "payment_method_bank_account_blocked",
+    "title": "Stripe payment_method_bank_account_blocked Error",
+    "description": "This bank account has failed verification in the past and can't be used. Contact us if you want to attempt to use these bank account credentials.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_unactivated_1757671342038_81",
+    "code": "payment_method_unactivated",
+    "title": "Stripe payment_method_unactivated Error",
+    "description": "The operation can't be performed because the payment method used hasn't been activated. Activate the payment method in the Dashboard, then try again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_currency_mismatch_1757671342038_82",
+    "code": "payment_method_currency_mismatch",
+    "title": "Stripe payment_method_currency_mismatch Error",
+    "description": "The currency specified doesn't match the currency for the attached payment method. A payment can only be created for the same currency as the corresponding payment method.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_unexpected_state_1757671342038_83",
+    "code": "payment_method_unexpected_state",
+    "title": "Stripe payment_method_unexpected_state Error",
+    "description": "The provided payment method's state was incompatible with the operation you were trying to perform. Confirm that the payment method is in an allowed state for the given operation before attempting to perform it.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_method_not_available_1757671342038_84",
+    "code": "payment_method_not_available",
+    "title": "Stripe payment_method_not_available Error",
+    "description": "The payment processor for the provided payment method is temporarily unavailable. Try a different payment method or retry later with the same payment method.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_unexpected_state_1757671342038_85",
+    "code": "payment_intent_unexpected_state",
+    "title": "Stripe payment_intent_unexpected_state Error",
+    "description": "The PaymentIntent's state was incompatible with the operation you were trying to perform.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_incompatible_payment_method_1757671342038_86",
+    "code": "payment_intent_incompatible_payment_method",
+    "title": "Stripe payment_intent_incompatible_payment_method Error",
+    "description": "The PaymentIntent expected a payment method with different properties than what was provided.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_invalid_parameter_1757671342038_87",
+    "code": "payment_intent_invalid_parameter",
+    "title": "Stripe payment_intent_invalid_parameter Error",
+    "description": "One or more provided parameters was not allowed for the given operation on the PaymentIntent. See the API reference or the returned error message to see which values weren't correct for that PaymentIntent.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_mandate_invalid_1757671342038_88",
+    "code": "payment_intent_mandate_invalid",
+    "title": "Stripe payment_intent_mandate_invalid Error",
+    "description": "The provided mandate is invalid and can't be used for the payment intent.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_setup_intent_mandate_invalid_1757671342038_89",
+    "code": "setup_intent_mandate_invalid",
+    "title": "Stripe setup_intent_mandate_invalid Error",
+    "description": "The provided mandate is invalid and can't be used for the setup intent.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_mandate_reference_prefix_format_1757671342038_90",
+    "code": "invalid_mandate_reference_prefix_format",
+    "title": "Stripe invalid_mandate_reference_prefix_format Error",
+    "description": "The provided prefix used to generate the mandate reference is invalid.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_konbini_rejected_confirmation_number_1757671342038_91",
+    "code": "payment_intent_konbini_rejected_confirmation_number",
+    "title": "Stripe payment_intent_konbini_rejected_confirmation_number Error",
+    "description": "The confirmation_number provided in payment_method_options[konbini] was rejected by the processing partner at time of PaymentIntent confirmation.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_authentication_failure_1757671342038_92",
+    "code": "payment_intent_authentication_failure",
+    "title": "Stripe payment_intent_authentication_failure Error",
+    "description": "The provided payment method has failed authentication. Provide a new payment method to attempt to fulfil this PaymentIntent again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_payment_attempt_failed_1757671342038_93",
+    "code": "payment_intent_payment_attempt_failed",
+    "title": "Stripe payment_intent_payment_attempt_failed Error",
+    "description": "The latest payment attempt for the PaymentIntent has failed. See the last_payment_error property on the PaymentIntent for more details, and provide a new payment method to attempt to fulfil this PaymentIntent again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_payment_attempt_expired_1757671342038_94",
+    "code": "payment_intent_payment_attempt_expired",
+    "title": "Stripe payment_intent_payment_attempt_expired Error",
+    "description": "The latest payment attempt for the PaymentIntent has expired. Check the last_payment_error property on the PaymentIntent for more details, and provide a new payment method to attempt to fulfil this PaymentIntent again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_setup_intent_setup_attempt_expired_1757671342038_95",
+    "code": "setup_intent_setup_attempt_expired",
+    "title": "Stripe setup_intent_setup_attempt_expired Error",
+    "description": "The latest setup attempt for the SetupIntent has expired. Check the last_setup_error property on the SetupIntent for more details, and provide a new payment method to attempt to complete this SetupIntent again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_amount_reconfirmation_required_1757671342038_96",
+    "code": "payment_intent_amount_reconfirmation_required",
+    "title": "Stripe payment_intent_amount_reconfirmation_required Error",
+    "description": "You provided information that changed the total amount of your PaymentIntent. Show the updated amount to your customer and try again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_automatic_tax_incomplete_1757671342038_97",
+    "code": "payment_intent_automatic_tax_incomplete",
+    "title": "Stripe payment_intent_automatic_tax_incomplete Error",
+    "description": "When automatic_tax[enabled]=true, you must provide enough location information to accurately determine tax rates for the buyer to confirm the PaymentIntent and collect taxes.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_payment_intent_action_required_1757671342038_98",
+    "code": "payment_intent_action_required",
+    "title": "Stripe payment_intent_action_required Error",
+    "description": "The provided payment method requires customer actions to complete, but error_on_requires_action was set. To add this payment method to your integration, we recommend that you first upgrade your integration to handle actions.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_platform_account_required_1757671342038_99",
+    "code": "platform_account_required",
+    "title": "Stripe platform_account_required Error",
+    "description": "Only Stripe Connect platforms can work with other accounts. You can set up a Stripe Connect platform in the Dashboard.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_setup_intent_authentication_failure_1757671342038_100",
+    "code": "setup_intent_authentication_failure",
+    "title": "Stripe setup_intent_authentication_failure Error",
+    "description": "The provided payment method has failed authentication. Provide a new payment method to attempt to fulfil this SetupIntent again.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication",
+      "security"
+    ]
+  },
+  {
+    "id": "stripe_setup_intent_unexpected_state_1757671342038_101",
+    "code": "setup_intent_unexpected_state",
+    "title": "Stripe setup_intent_unexpected_state Error",
+    "description": "The SetupIntent's state was incompatible with the operation you were trying to perform.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_setup_intent_invalid_parameter_1757671342038_102",
+    "code": "setup_intent_invalid_parameter",
+    "title": "Stripe setup_intent_invalid_parameter Error",
+    "description": "One or more provided parameters was not allowed for the given operation on the SetupIntent. See the API reference or the returned error message to see which values weren't correct for that SetupIntent.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_setup_attempt_failed_1757671342038_103",
+    "code": "setup_attempt_failed",
+    "title": "Stripe setup_attempt_failed Error",
+    "description": "The latest setup attempt for the SetupIntent has failed. Check the last_setup_error property on the SetupIntent for more details, and provide a new payment method to attempt to set it up again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_status_transition_invalid_1757671342038_104",
+    "code": "status_transition_invalid",
+    "title": "Stripe status_transition_invalid Error",
+    "description": "The requested status transition isn't valid.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_payouts_not_allowed_1757671342038_105",
+    "code": "payouts_not_allowed",
+    "title": "Stripe payouts_not_allowed Error",
+    "description": "Payouts have been disabled on the connected account. Check the connected account's status to see if any additional information needs to be provided, or if payouts have been disabled for another reason.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Transfers & Payouts",
+    "tags": [
+      "stripe",
+      "api",
+      "transfers_&_payouts"
+    ]
+  },
+  {
+    "id": "stripe_platform_api_key_expired_1757671342038_106",
+    "code": "platform_api_key_expired",
+    "title": "Stripe platform_api_key_expired Error",
+    "description": "The API key provided by your Connect platform has expired. This occurs if your platform has either generated a new key or the connected account has been disconnected from the platform. Obtain your current API keys from the Dashboard and update your integration, or contact the user and reconnect the account.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_postal_code_invalid_1757671342038_107",
+    "code": "postal_code_invalid",
+    "title": "Stripe postal_code_invalid Error",
+    "description": "The postal code provided was incorrect.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_refer_to_customer_1757671342038_108",
+    "code": "refer_to_customer",
+    "title": "Stripe refer_to_customer Error",
+    "description": "The customer has stopped the payment with their bank. Contact them for details and to arrange payment.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "customer",
+      "account",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_resource_already_exists_1757671342038_109",
+    "code": "resource_already_exists",
+    "title": "Stripe resource_already_exists Error",
+    "description": "A resource with a user-specified ID (for example, plan or coupon) already exists. Use a different, unique value for id and try again.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_resource_missing_1757671342038_110",
+    "code": "resource_missing",
+    "title": "Stripe resource_missing Error",
+    "description": "The ID provided isn't valid. Either the resource doesn't exist, or an ID for a different resource has been provided.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_routing_number_invalid_1757671342038_111",
+    "code": "routing_number_invalid",
+    "title": "Stripe routing_number_invalid Error",
+    "description": "The bank routing number provided is invalid.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_stripe_tax_inactive_1757671342038_112",
+    "code": "stripe_tax_inactive",
+    "title": "Stripe stripe_tax_inactive Error",
+    "description": "Stripe Tax hasn't been activated on your account. See the setup documentation to get started.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Tax & Shipping",
+    "tags": [
+      "stripe",
+      "api",
+      "tax_&_shipping"
+    ]
+  },
+  {
+    "id": "stripe_clearing_code_unsupported_1757671342038_113",
+    "code": "clearing_code_unsupported",
+    "title": "Stripe clearing_code_unsupported Error",
+    "description": "The clearing code provided isn't supported.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_secret_key_required_1757671342038_114",
+    "code": "secret_key_required",
+    "title": "Stripe secret_key_required Error",
+    "description": "The API key provided is a publishable key, but a secret key is required. Obtain your current API keys from the Dashboard and update your integration to use them.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "critical",
+    "frequency": "Very Common",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_state_unsupported_1757671342038_115",
+    "code": "state_unsupported",
+    "title": "Stripe state_unsupported Error",
+    "description": "Occurs when providing the legal_entity information for a US custom account, if the provided state isn't supported. (This is mostly associated states and territories.)",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_tax_id_invalid_1757671342038_116",
+    "code": "tax_id_invalid",
+    "title": "Stripe tax_id_invalid Error",
+    "description": "The tax ID number provided is invalid (for example, missing digits). Tax ID information varies from country to country, but must be at least nine digits.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_tax_id_prohibited_1757671342038_117",
+    "code": "tax_id_prohibited",
+    "title": "Stripe tax_id_prohibited Error",
+    "description": "A tax identifier may not be provided on this payment method as it isn't required.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Tax & Shipping",
+    "tags": [
+      "stripe",
+      "api",
+      "tax_&_shipping"
+    ]
+  },
+  {
+    "id": "stripe_terminal_location_country_unsupported_1757671342038_118",
+    "code": "terminal_location_country_unsupported",
+    "title": "Stripe terminal_location_country_unsupported Error",
+    "description": "Terminal is currently only available in some countries. Locations in your country can't be created in live mode.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_offline_1757671342038_119",
+    "code": "terminal_reader_offline",
+    "title": "Stripe terminal_reader_offline Error",
+    "description": "Reader is currently offline. Ensure the reader is powered on and connected to the internet before retrying your request. See the integration guide for details on how to handle this error.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_timeout_1757671342038_120",
+    "code": "terminal_reader_timeout",
+    "title": "Stripe terminal_reader_timeout Error",
+    "description": "There was a timeout when sending this command to the reader. See the integration guide for details on how to handle this error.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_busy_1757671342038_121",
+    "code": "terminal_reader_busy",
+    "title": "Stripe terminal_reader_busy Error",
+    "description": "Reader is currently busy processing another request. See the integration guide for details on how to handle this error.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_hardware_fault_1757671342038_122",
+    "code": "terminal_reader_hardware_fault",
+    "title": "Stripe terminal_reader_hardware_fault Error",
+    "description": "Reader can no longer accept payments as an unrecoverable hardware fault has been detected. Contact Stripe support and provide your reader's serial number for replacement.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_invalid_location_for_activation_1757671342038_123",
+    "code": "terminal_reader_invalid_location_for_activation",
+    "title": "Stripe terminal_reader_invalid_location_for_activation Error",
+    "description": "Reader can't be activated in the currently registered Location. Register the reader to a new Location. See Manage locations for more information.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_terminal_reader_invalid_location_for_payment_1757671342038_124",
+    "code": "terminal_reader_invalid_location_for_payment",
+    "title": "Stripe terminal_reader_invalid_location_for_payment Error",
+    "description": "Reader can't take payments in the currently registered Location. Register the reader to a new Location. See Manage locations for more information.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_tls_version_unsupported_1757671342038_125",
+    "code": "tls_version_unsupported",
+    "title": "Stripe tls_version_unsupported Error",
+    "description": "Your integration is using an older version of TLS that's unsupported. You must be using TLS 1.2 or above.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_token_already_used_1757671342038_126",
+    "code": "token_already_used",
+    "title": "Stripe token_already_used Error",
+    "description": "The token provided has already been used. You must create a new token before you can retry this request.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_token_in_use_1757671342038_127",
+    "code": "token_in_use",
+    "title": "Stripe token_in_use Error",
+    "description": "The token provided is currently being used in another request. This occurs if your integration is making duplicate requests simultaneously.",
+    "solution": "Verify your Stripe API key is correct and has the necessary permissions.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Authentication",
+    "tags": [
+      "stripe",
+      "api",
+      "authentication"
+    ]
+  },
+  {
+    "id": "stripe_transfers_not_allowed_1757671342038_128",
+    "code": "transfers_not_allowed",
+    "title": "Stripe transfers_not_allowed Error",
+    "description": "The requested transfer can't be created. Contact us if you're receiving this error.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Transfers & Payouts",
+    "tags": [
+      "stripe",
+      "api",
+      "transfer",
+      "payout",
+      "transfers_&_payouts"
+    ]
+  },
+  {
+    "id": "stripe_transfer_source_balance_parameters_mismatch_1757671342038_129",
+    "code": "transfer_source_balance_parameters_mismatch",
+    "title": "Stripe transfer_source_balance_parameters_mismatch Error",
+    "description": "When creating a Transfer, the payments parameter in source_balance shouldn't be passed in when balance type is set to issuing.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "transfer",
+      "payout",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_url_invalid_1757671342038_130",
+    "code": "url_invalid",
+    "title": "Stripe url_invalid Error",
+    "description": "The URL provided is invalid.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_not_allowed_on_standard_account_1757671342038_131",
+    "code": "not_allowed_on_standard_account",
+    "title": "Stripe not_allowed_on_standard_account Error",
+    "description": "Transfers and payouts on behalf of a Standard connected account aren't allowed.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_lock_timeout_1757671342038_132",
+    "code": "lock_timeout",
+    "title": "Stripe lock_timeout Error",
+    "description": "This object can't be accessed right now because another API request or Stripe process is currently accessing it. If you see this error intermittently, retry the request. If you see this error frequently and are making multiple concurrent requests to a single object, make your requests serially or at a lower rate. See the Object lock timeouts for more details.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_cardholder_phone_number_required_1757671342038_133",
+    "code": "cardholder_phone_number_required",
+    "title": "Stripe cardholder_phone_number_required Error",
+    "description": "You must have a phone_number on file for Issuing Cardholders who will be creating EU cards. You can't create EU cards without a phone_number on file for the cardholder. See the 3DS Secure for more details.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "card",
+      "payment",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_return_intent_already_processed_1757671342038_134",
+    "code": "return_intent_already_processed",
+    "title": "Stripe return_intent_already_processed Error",
+    "description": "You can't confirm this refund as it's already processed.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_refund_disputed_payment_1757671342038_135",
+    "code": "refund_disputed_payment",
+    "title": "Stripe refund_disputed_payment Error",
+    "description": "You can't refund a disputed payment.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_progressive_onboarding_limit_exceeded_1757671342038_136",
+    "code": "progressive_onboarding_limit_exceeded",
+    "title": "Stripe progressive_onboarding_limit_exceeded Error",
+    "description": "Progressive onboarding limit has been reached for the platform.",
+    "solution": "Implement exponential backoff in your retry logic.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Uncommon",
+    "category": "Rate Limiting",
+    "tags": [
+      "stripe",
+      "api",
+      "rate_limiting"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_inactive_1757671342038_137",
+    "code": "forwarding_api_inactive",
+    "title": "Stripe forwarding_api_inactive Error",
+    "description": "The Vault and Forward API is currently not accessible with this account and configuration. Contact us if you're receiving this error.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_invalid_parameter_1757671342038_138",
+    "code": "forwarding_api_invalid_parameter",
+    "title": "Stripe forwarding_api_invalid_parameter Error",
+    "description": "Invalid parameter was provided in the Vault and Forward API. Check our API documentation or the returned error message for more context.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_upstream_connection_timeout_1757671342038_139",
+    "code": "forwarding_api_upstream_connection_timeout",
+    "title": "Stripe forwarding_api_upstream_connection_timeout Error",
+    "description": "The request to the destination endpoint timed out. This typically indicates a problem with the destination endpoint, rather than with Stripe.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Rare",
+    "category": "Stripe Connect",
+    "tags": [
+      "stripe",
+      "api",
+      "connect",
+      "platform",
+      "stripe_connect"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_upstream_connection_error_1757671342038_140",
+    "code": "forwarding_api_upstream_connection_error",
+    "title": "Stripe forwarding_api_upstream_connection_error Error",
+    "description": "Stripe didn't receive a response from the destination endpoint. This typically indicates a problem with the destination endpoint, rather than with Stripe.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Rare",
+    "category": "Stripe Connect",
+    "tags": [
+      "stripe",
+      "api",
+      "connect",
+      "platform",
+      "stripe_connect"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_retryable_upstream_error_1757671342038_141",
+    "code": "forwarding_api_retryable_upstream_error",
+    "title": "Stripe forwarding_api_retryable_upstream_error Error",
+    "description": "The destination endpoint appears to be offline or unresponsive, preventing Stripe from completing the request. Retry the request later.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_forwarding_api_upstream_error_1757671342038_142",
+    "code": "forwarding_api_upstream_error",
+    "title": "Stripe forwarding_api_upstream_error Error",
+    "description": "The destination endpoint appears to be offline or unresponsive, preventing Stripe from completing the request. You might want to investigate the state of the request on the third party because bytes might have been sent and the third-party state could be indeterminate.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_alipay_upgrade_required_1757671342038_143",
+    "code": "alipay_upgrade_required",
+    "title": "Stripe alipay_upgrade_required Error",
+    "description": "This method for creating Alipay payments is no longer supported. Upgrade your integration to use Sources instead.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_bitcoin_upgrade_required_1757671342038_144",
+    "code": "bitcoin_upgrade_required",
+    "title": "Stripe bitcoin_upgrade_required Error",
+    "description": "This method for creating Bitcoin payments is no longer supported. Upgrade your integration to use Sources instead.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_card_declined_1757671342038_145",
+    "code": "card_declined",
+    "title": "Stripe card_declined Error",
+    "description": "The card has been declined. When a card is declined, the error returned also includes the decline_code attribute with the reason why the card was declined. To learn more, see decline codes.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "card",
+      "payment",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_charge_expired_for_capture_1757671342038_146",
+    "code": "charge_expired_for_capture",
+    "title": "Stripe charge_expired_for_capture Error",
+    "description": "The charge can't be captured because the authorisation has expired. Authorisation and capture charges must be captured within a set number of days (7 by default).",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_expired_card_1757671342038_147",
+    "code": "expired_card",
+    "title": "Stripe expired_card Error",
+    "description": "The card has expired. Check the expiry date or use a different card.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "card",
+      "payment",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_incorrect_address_1757671342038_148",
+    "code": "incorrect_address",
+    "title": "Stripe incorrect_address Error",
+    "description": "The card's address is incorrect. Check the card's address or use a different card.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_incorrect_cvc_1757671342038_149",
+    "code": "incorrect_cvc",
+    "title": "Stripe incorrect_cvc Error",
+    "description": "The card's security code is incorrect. Check the card's security code or use a different card.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_incorrect_number_1757671342038_150",
+    "code": "incorrect_number",
+    "title": "Stripe incorrect_number Error",
+    "description": "The card number is incorrect. Check the card's number or use a different card.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_incorrect_zip_1757671342038_151",
+    "code": "incorrect_zip",
+    "title": "Stripe incorrect_zip Error",
+    "description": "The card's postal code is incorrect. Check the card's postal code or use a different card.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_invalid_tax_location_1757671342038_152",
+    "code": "invalid_tax_location",
+    "title": "Stripe invalid_tax_location Error",
+    "description": "The specified location is invalid. Check the Supported address formats for the address formats supported when calculating tax.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_charge_amount_1757671342038_153",
+    "code": "invalid_charge_amount",
+    "title": "Stripe invalid_charge_amount Error",
+    "description": "The specified amount is invalid. The charge amount must be a positive integer in the smallest currency unit, and not exceed the minimum or maximum amount.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_invalid_cvc_1757671342038_154",
+    "code": "invalid_cvc",
+    "title": "Stripe invalid_cvc Error",
+    "description": "The card's security code is invalid. Check the card's security code or use a different card.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_expiry_month_1757671342038_155",
+    "code": "invalid_expiry_month",
+    "title": "Stripe invalid_expiry_month Error",
+    "description": "The card's expiry month is incorrect. Check the expiry date or use a different card.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_expiry_year_1757671342038_156",
+    "code": "invalid_expiry_year",
+    "title": "Stripe invalid_expiry_year Error",
+    "description": "The card's expiry year is incorrect. Check the expiry date or use a different card.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_number_1757671342038_157",
+    "code": "invalid_number",
+    "title": "Stripe invalid_number Error",
+    "description": "The card number is invalid. Check the card details or use a different card.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_invalid_source_usage_1757671342038_158",
+    "code": "invalid_source_usage",
+    "title": "Stripe invalid_source_usage Error",
+    "description": "The source can't be used because it isn't in the correct state (for example, a charge request is trying to use a source with a pending, failed, or consumed status). Check the status of the source you're attempting to use.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  },
+  {
+    "id": "stripe_livemode_mismatch_1757671342038_159",
+    "code": "livemode_mismatch",
+    "title": "Stripe livemode_mismatch Error",
+    "description": "Test and live mode API keys, requests, and objects are only available within the corresponding mode.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_missing_1757671342038_160",
+    "code": "missing",
+    "title": "Stripe missing Error",
+    "description": "Both a customer and source ID have been provided, but the source hasn't been saved to the customer. To create a charge for a customer with a specified source, you must first save the card details.",
+    "solution": "Check that all required parameters are included in your request.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Very Common",
+    "category": "Validation",
+    "tags": [
+      "stripe",
+      "api",
+      "validation"
+    ]
+  },
+  {
+    "id": "stripe_processing_error_1757671342038_161",
+    "code": "processing_error",
+    "title": "Stripe processing_error Error",
+    "description": "An error occurred while processing the card. Try again later or with a different payment method.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_product_inactive_1757671342038_162",
+    "code": "product_inactive",
+    "title": "Stripe product_inactive Error",
+    "description": "The product this SKU belongs to is no longer available for purchase.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_rate_limit_1757671342038_163",
+    "code": "rate_limit",
+    "title": "Stripe rate_limit Error",
+    "description": "Too many requests hit the API too quickly. We recommend an exponential back-off of your requests.",
+    "solution": "Implement exponential backoff in your retry logic.",
+    "api": "stripe",
+    "severity": "warning",
+    "frequency": "Uncommon",
+    "category": "Rate Limiting",
+    "tags": [
+      "stripe",
+      "api",
+      "rate_limiting"
+    ]
+  },
+  {
+    "id": "stripe_sepa_unsupported_account_1757671342038_164",
+    "code": "sepa_unsupported_account",
+    "title": "Stripe sepa_unsupported_account Error",
+    "description": "Your account doesn't support SEPA payments.",
+    "solution": "Verify the account or customer ID exists and is accessible.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Account Management",
+    "tags": [
+      "stripe",
+      "api",
+      "account_management"
+    ]
+  },
+  {
+    "id": "stripe_shipping_calculation_failed_1757671342038_165",
+    "code": "shipping_calculation_failed",
+    "title": "Stripe shipping_calculation_failed Error",
+    "description": "Shipping calculation failed because the information provided was either incorrect or couldn't be verified.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Tax & Shipping",
+    "tags": [
+      "stripe",
+      "api",
+      "tax_&_shipping"
+    ]
+  },
+  {
+    "id": "stripe_sku_inactive_1757671342038_166",
+    "code": "sku_inactive",
+    "title": "Stripe sku_inactive Error",
+    "description": "The SKU is inactive and no longer available for purchase. Use a different SKU, or make the current SKU active again.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "General",
+    "tags": [
+      "stripe",
+      "api",
+      "general"
+    ]
+  },
+  {
+    "id": "stripe_taxes_calculation_failed_1757671342038_167",
+    "code": "taxes_calculation_failed",
+    "title": "Stripe taxes_calculation_failed Error",
+    "description": "Tax calculation for the order failed.",
+    "solution": "Review the Stripe API documentation for this specific error.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Moderate",
+    "category": "Tax & Shipping",
+    "tags": [
+      "stripe",
+      "api",
+      "tax_&_shipping"
+    ]
+  },
+  {
+    "id": "stripe_testmode_charges_only_1757671342038_168",
+    "code": "testmode_charges_only",
+    "title": "Stripe testmode_charges_only Error",
+    "description": "Your account hasn't been activated and can only make test charges. Activate your account in the Dashboard to begin processing live charges.",
+    "solution": "Verify the payment method details are correct and valid.",
+    "api": "stripe",
+    "severity": "error",
+    "frequency": "Common",
+    "category": "Payment Processing",
+    "tags": [
+      "stripe",
+      "api",
+      "payment_processing"
+    ]
+  }
+]

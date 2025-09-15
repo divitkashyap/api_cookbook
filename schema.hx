@@ -59,7 +59,11 @@ N::Parameter {
 N::ErrorPattern {
     INDEX code: String,     // "authentication_failed", "invalid_request" - INDEX for search
     message: String,        // "Your API key is invalid"
-    description: String     // Full error context
+    description: String,     // Full error context
+    resource: String,
+    method: String,
+    http_status: I32,
+    severity: String
 }
 
 N::Solution {
@@ -70,7 +74,12 @@ N::Solution {
     upvotes: I32            // Use I32 instead of Int
 }
 
-// Relationships - Add missing API_to_ErrorPattern edge
+// Vector embeddings for semantic search
+V::ErrorEmbedding {
+    embedding: [F64]  // Vector representation of the error
+}
+
+// Relationships
 E::API_to_Endpoint {
     From: API,
     To: Endpoint,
@@ -104,5 +113,11 @@ E::ErrorPattern_to_Solution {
 E::ErrorPattern_to_Parameter {
     From: ErrorPattern,
     To: Parameter,
+    Properties: {}
+}
+
+E::ErrorPattern_to_ErrorEmbedding {
+    From: ErrorPattern,
+    To: ErrorEmbedding,
     Properties: {}
 }

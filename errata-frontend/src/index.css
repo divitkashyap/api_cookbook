@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark-themed API Cookbook Design System - Graph/Vector theme */
+
+@layer base {
+  :root {
+    /* Minimal black background with blue accents */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+    
+    --surface: 0 0% 5%;
+    --surface-elevated: 0 0% 8%;
+    --surface-hover: 0 0% 12%;
+    
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    
+    /* Blue primary theme */
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 210 100% 65%;
+    
+    /* Muted blue secondary */
+    --secondary: 210 25% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    
+    /* Lighter blue accent */
+    --accent: 210 80% 45%;
+    --accent-foreground: 0 0% 0%;
+    
+    /* Keep functional colors minimal */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --success: 210 100% 55%;
+    --success-foreground: 0 0% 0%;
+    
+    --warning: 210 100% 55%;
+    --warning-foreground: 0 0% 0%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 210 100% 55%;
+    
+    --radius: 0.75rem;
+    
+    /* Minimal gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-surface: linear-gradient(145deg, hsl(var(--surface)), hsl(var(--surface-elevated)));
+    --gradient-accent: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--primary)));
+    --gradient-cyber: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    
+    /* Subtle shadows */
+    --shadow-glow: 0 0 15px hsl(var(--primary) / 0.2);
+    --shadow-accent: 0 0 10px hsl(var(--accent) / 0.15);
+    --shadow-cyber: 0 5px 20px hsl(var(--primary) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+
+body {
+    @apply bg-background text-foreground font-jakarta;
+    padding-top: 100px; /* Account for floating navbar */
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsl(var(--primary) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(var(--primary) / 0.03) 0%, transparent 50%);
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  /* Graph/Network visual elements */
+  .graph-dots {
+    background-image: radial-gradient(circle, hsl(var(--primary) / 0.2) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  .glow-cyber {
+    box-shadow: var(--shadow-cyber);
+  }
+  
+  /* Interactive animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 25px hsl(var(--primary) / 0.4);
+  }
+  
+  /* Pulse animation */
+  .pulse-slow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 15px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 0.6);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

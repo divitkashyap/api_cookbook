@@ -22,10 +22,17 @@ QUERY createAPI(name: String, base_url: String, version: String, docs_url: Strin
     api <- AddN<API>({name: name, base_url: base_url, version: version, docs_url: docs_url})
     RETURN api
 
-// Create error pattern - ADD missing parameters
+// Create error pattern - FIXED: Use all parameters or make them optional
 QUERY createErrorPattern(api_id: ID, code: String, message: String, description: String, resource: String, method: String, http_status: I32, severity: String) =>
-    error <- AddN<ErrorPattern>({code: code, message: message, description: description})
-    
+    error <- AddN<ErrorPattern>({
+        code: code, 
+        message: message, 
+        description: description,
+        resource: resource,
+        method: method,
+        http_status: http_status,
+        severity: severity
+    })
     api <- N<API>(api_id)
     api_error <- AddE<API_to_ErrorPattern>()::From(api)::To(error)
     RETURN error
@@ -62,3 +69,35 @@ QUERY getAPIErrors(api_name: String) =>
 QUERY testQuery() =>
     apis <- N<API>
     RETURN apis
+
+QUERY getEndpointErrors(api_name: String, endpoint_path: String) =>
+    api <- N<API>({name: api_name})
+    errors <- api::Out<API_to_ErrorPattern>
+    solutions <- errors::Out<ErrorPattern_to_Solution>
+    RETURN errors, solutions
+
+//Find related errors through shared parameters
+QUERY findRelatedErrors(error_code: String) =>
+    mainError <- N<ErrorPattern>({code: error_code})
+    params <- mainError::Out<ErrorPattern_to_Parameter>
+    relatedErrors <- params::In<ErrorPattern_to_Parameter>
+    solutions <- relatedErrors::Out<ErrorPattern_to_Solution>
+    RETURN mainError, relatedErrors, solutions
+
+QUERY searchErrorsByVector(query_vector: [F64], k: I64) =>
+    embeddings <- SearchV<ErrorEmbedding>(query_vector, k)
+    errors <- embeddings::In<ErrorPattern_to_ErrorEmbedding>
+    solutions <- errors::Out<ErrorPattern_to_Solution>
+    RETURN errors, solutions
+
+QUERY hybridErrorSearch(error_code: String, query_vector: [F64], k: I64) =>
+    // Exact match first
+    exactErrors <- N<ErrorPattern>({code: error_code})
+    exactSolutions <- exactErrors::Out<ErrorPattern_to_Solution>
+    
+    // Vector search for similar
+    embeddings <- SearchV<ErrorEmbedding>(query_vector, k)
+    vectorErrors <- embeddings::In<ErrorPattern_to_ErrorEmbedding>
+    vectorSolutions <- vectorErrors::Out<ErrorPattern_to_Solution>
+    
+    RETURN exactErrors, exactSolutions, vectorErrors, vectorSolutions
